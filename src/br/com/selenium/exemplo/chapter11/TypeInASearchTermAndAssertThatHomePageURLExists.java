@@ -29,7 +29,9 @@ public class TypeInASearchTermAndAssertThatHomePageURLExists extends InitialiseS
 		// call getXpathCount with our last url xpath and add
 		// the returned intValue to the total
 		matchingCountTotal += selenium.getXpathCount("//a[@href='http://seleniumhq.org/projects/remote-control/']").intValue();
-		assertTrue("No homepage URL found", matchingCountTotal > 0);
+		assertTrue("No homepage URL found", matchingCountTotal == 1);
+		assertEquals(1, matchingCountTotal);
+
 	}
 
 }
